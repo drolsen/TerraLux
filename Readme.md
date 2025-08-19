@@ -32,20 +32,21 @@ Lets go over our Main Toolbar features now.
 ## Main Toolbar
 
 ### Biome Dropdown / Listing
+
+Dropdown = This is where we will list all the unique biomes the user has made, they can switch between these biomes and see their complete list with this dropdown. 
 ![biome dropdown empty state](https://github.com/drolsen/terralux/blob/main/screenshots/Bome-Dropdown-Empty-State.jpg?raw=true)
-- Dropdown = This is where we will list all the unique biomes the user has made, they can switch between these biomes and see their complete list with this dropdown. 
 
+Plus Button = When clicked, the dropdown will be turned into a text field and the plus button replaced with a [OK] / [Cancel] confirmation buttons. User provides a unique name (no duplicate names) for their biome and clicks ok to make their first biome. Click cancel and they will jump out of the "make new biome" experience. 
 ![biome dropdown plus button](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Curate-State.jpg?raw=true)
-- Plus Button = When clicked, the dropdown will be turned into a text field and the plus button replaced with a [OK] / [Cancel] confirmation buttons. User provides a unique name (no duplicate names) for their biome and clicks ok to make their first biome. Click cancel and they will jump out of the "make new biome" experience. 
 
+Clicking Ok and Cancel makes the dropdown and plus button comes back; only clicking ok adds new biome to dropdown as an item and auto selects it for the user.
 ![biome dropdown closed state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Closed-State.jpg?raw=true)
-In both click Ok and Cancel, dropdown and plus button comes back, but only clicking ok adds new biome to dropdown as an item and auto selects it for the user.
 
-![biome dropdown curate mode](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Mode-2D-preview.jpg?raw=true)
 When making a new biome, user should be put into the "Biome "edit mode automatically (more on what Biome edit mode is soon).
+![biome dropdown curate mode](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Mode-2D-preview.jpg?raw=true)
 
-![biome dropdown open state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Open-State.jpg?raw=true)
 Clicking on this drop down will open it and allow the user to choose between may other possible Biomes they have made in the past.
+![biome dropdown open state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Open-State.jpg?raw=true)
 
 ### Edit Modes
 All our next buttons are disabled until the user has made at least 1 biome:
