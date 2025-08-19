@@ -1,4 +1,12 @@
-# TerraLux User Flow
+# Goal
+The goal of this plugin is to give me the artist a cleaner user interface to a very complex runtime terrain generation system I've built.
+Right now this runtime terrain generation system is hardcoded with a lot of values spread out across the system. What we are hoping to achieve here is make a plugin that distils all these properties and values into a cohesive, easy to use, meaningful tool that allows me to craft unique and interesting terrains for games without having to remember lots of hardcoded values across lots of scripts.
+
+In the future if this works well and is found to have beneifit, it will be turned into a public plugin for others to use. Further more the plugin we are building will work in conjunction with our core terrain generating code at runtime, but eventually will have a full buildtime feature too.
+
+For more information about the core runtime terrain generating scripts, see (Core-Terrain-Generator-Scripts Readme)[https://github.com/drolsen/TerraLux/blob/main/Core-Terrain-Generator-Scripts.md]
+
+# TerraLux Plugin User Flow
 
 1) User opens plugin and is ready to make their first biome.
 2) User makes biome, selects from exsisting or loads up previously editing biome and is put into the "Biome Edit Mode".
