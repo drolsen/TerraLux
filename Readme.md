@@ -1,3 +1,15 @@
+# TerraLux User Flow
+
+1) User opens plugin and is ready to make their first biome.
+2) User makes biome, selects from exsisting or loads up previously editing biome and is put into the "Biome Edit Mode".
+3) User alters and tweaks their Biome properties until perfected, and then user moves onto "Materials Edit Mode"
+4) User alters and tweaks their Materials properties until perfected, and then moves onto "Environmental Edit Mode"
+5) User alters and tweaks their Environmental properties until perfected, and then moves onto "Stamp Edit Mode"
+6) User alters and tweaks their Stamp properties until perfected, and then moves onto "Lighting Edit Mode"
+7) User alters and tweaks their Lighting properties until perfectd, and then moves onto "Cave Edit Mode"
+8) User alters and tweaks their Cave properties until perfected and then has a completed all plugin options.
+
+
 # TerraLux Plugin Specs
 
 First lets start with the high level UI overview.
@@ -413,3 +425,13 @@ Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mo
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
 ![preview window toggle environmental option](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
+
+# Saving Data
+Biomes/settings should be saved via plugin:SetSetting/GetSetting (per‑user, per‑machine), serialized to a ModuleScript/JSON that is hidden from the users best possible. We should be auto‑saving the current biome properties across all the edit modes whenever a value changes. When the user opens the plugin for the first time, a new JSON file should be crafted and there after read from to restore the users last editing session.
+
+The core terrain generating code that will eventually consume TerraLux plugin data is not setup to read from any JSON file, but rather has all its values hardcoded right now. However the idea here is the user can feed their JSON session from TerraLux and have the code parse / generate that terrain runtime. Right now the entire setup is intended to be runtime, once that is perfected we will make a seperate project at having a build time feature too.
+
+Important part to know right now is that we indeed what to have a persistent session based experince that is auto saving all changes to a under the hood JSON file / schema. This file will not only act as our way to make oure persisten experince, but eventually be used to feed these settings to our runtime terrain generator code as well.
+
+# Plugin Iconography
+We have a lot of icons to this plugin, and all of them can be found in our icons folder. Each should be named according to the section they live in (Main Toolbar, Properties window, Preview window) and given a name that describes their feature.
