@@ -115,9 +115,9 @@ While other sub listings are user curated: <br/>
 - Terraces Properties Card
 
 Each of these cards have a card heading with a title and a expand/collapse up/down arrow.
-Each property has a divider line, left aligned label and a right aligned field(s). Some properties have multiple fields for things like 2d vectors or Small / Medium / Large variants that have accompanying labels.
+Each property has a divider line, left aligned label and a right aligned field(s). Some properties have multiple fields for things like 2d vectors or Small / Medium / Large variants that have accompanying labels. <br/>
 
-Lets go over each of the properties in each of the cards
+Lets go over each of the properties in each of the cards.
 -Altitude
 -- Max Altitude = float number input
 -- Elevation Trend = float number input
@@ -338,6 +338,7 @@ There are only three options ever 1024x1024, 512x512 and 256x256. This is just a
 -- Lower left corner of the preview is arrows to denote a window resize drag spot; nothing more. User clicks and drags here, and they are resizing the window. Resizing however must maintain aspect ratio in order to respect our 2D grid zooming below (I think).
 
 Lets now talk about 2D and 3D views.
+## Preview Window Different Views
 
 ## 2D View
 Because we can't generate images via roblox API, the preview window's 2D mode must be a big grid of GUI frames that very their values between black and white for some edit modes, or a full color value in other edit modes (we will go over the rules for that over each of the requirements for preview window across the different edit modes coming up). The grid of frames in 2D that represents our pixel approximation is defined by our sample size. Moving around using the move tool doesn't redraw all our frames, but color shifts them based on our coordinates. Rotating again does a color shift by rotating our numbers 90deg. Zoom will zoom in 5 grid cells at a time, the max you can zoom out is defined by our sample size, the min you can zoom in is down to 1 cell taking up our entire preview window. For context, our sample size is acting like a resolution of our 2D preview if you will and sample size defines our max zoom out.
