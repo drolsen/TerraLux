@@ -118,34 +118,34 @@ Each of these cards have a card heading with a title and a expand/collapse up/do
 Each property has a divider line, left aligned label and a right aligned field(s). Some properties have multiple fields for things like 2d vectors or Small / Medium / Large variants that have accompanying labels. <br/>
 
 Lets go over each of the properties in each of the cards.
--Altitude
+#### Altitude
 -- Max Altitude = float number input
 -- Elevation Trend = float number input
 
--Fractals
+#### Fractals
 -- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 -- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
-- Ridges
+#### Ridges
 -- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 -- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
-- Warping
+#### Warping
 -- Amplitude = two float number inputs; one for small (S), and one for large (L)
 -- Frequency = two float number inputs; one for small (S), and one for large (L)
 
-- Crevasses
+#### Crevasses
 -- Depth Amplitude = single float number input
 -- Direction = two float number input; one for X and one for Y
 -- Sharp Exponent = single float number input
 -- Space Frequency = single float number input
 
--Terraces
+#### Terraces
 -- Sharp Exponent = single float number input
 -- Space Frequency = single float number input
 
 ----
-### Materials Edit Mode Properties
+## Materials Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Material-Edit-Properties.jpg?raw=true) <br/>
 - 21 properties cards for each of the allowed terrain materials in roblox. 
 
@@ -175,85 +175,86 @@ Lets go over each of the properties in each of the cards.
 Each card has a heading with title of that terrain material name, and a expand/collapse up/down arrow. (now we understand why properties window had a scrollbar primed this whole time).
 Lets go over each of the properties in each of the cards:
 
-- Material preview is just a normal preview of the available terrain material for a visual representation.
+### Material preview 
+is just a normal preview of the available terrain material for a visual representation.
 -- Apply = checkbox which applies this material to our terrain (on / off switch if you will)
 -- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
 -- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
 
-- Material Filters = In the event that the material is not layer 0 (base material), users can add as many of what are called "filters" and define at what altitude, should slopes or curves of particular degrees should be painted with said material. There is a plus button next to the "Material Filters" title, that upon being clicked will add a new filter subcard with zeroed out values in fields, and a title that reads "New Filter" to encourage the user to name it. Each filter added is a subcard with a heading. In the headings there is a remove button, title and expand / collapse icon. Double clicking the title in these headings allows users to rename them, clicking remove will remove the filter (but first ask the user if they are sure with a confirmation dialog of some kind). Clicking expand / collapse will collapse the filter card or expand it to be edited.
+### Material Filters 
+In the event that the material is not layer 0 (base material), users can add as many of what are called "filters" and define at what altitude, should slopes or curves of particular degrees should be painted with said material. There is a plus button next to the "Material Filters" title, that upon being clicked will add a new filter subcard with zeroed out values in fields, and a title that reads "New Filter" to encourage the user to name it. Each filter added is a subcard with a heading. In the headings there is a remove button, title and expand / collapse icon. Double clicking the title in these headings allows users to rename them, clicking remove will remove the filter (but first ask the user if they are sure with a confirmation dialog of some kind). Clicking expand / collapse will collapse the filter card or expand it to be edited.
+
 -- Altitude = float / number sequence input
 -- Slope = float / number sequence input
 -- Curve = float / number sequence input
 
 ----
 
-### Environmental Edit Mode Properties
+## Environmental Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Properties.jpg?raw=true)
 
-- Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Environmental properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Environmental Categories.
+Top of our properties window we have text input and a plus button. 
+Idea here is when user provides a category name (must be unique) and clicks the plus, a new Environmental properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Environmental Categories.
 
-- Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
+Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
 
 Lets go over each of the properties in each of the environmental category property cards
 
-- ScaleMin = single float input
-- ScaleMax = single float input
-- Altitude = single float input, and this has an icon before the label
-- Slope = single float input, and this has an icon before the label
-- Spacing = number input
-- Rot Axis = three checkboxes labeled X, Y and Z
-- Max Deg = three  number inputs labeled X, Y and Z
-- Align to normal = single checkbox
-- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our environmental properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
-
-- Avoid footprint = single number input
-- Self Overlap = single checkbox
-- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
-- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
+-- ScaleMin = single float input
+-- ScaleMax = single float input
+-- Altitude = single float input, and this has an icon before the label
+-- Slope = single float input, and this has an icon before the label
+-- Spacing = number input
+-- Rot Axis = three checkboxes labeled X, Y and Z
+-- Max Deg = three  number inputs labeled X, Y and Z
+-- Align to normal = single checkbox
+-- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our environmental properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
+-- Avoid footprint = single number input
+-- Self Overlap = single checkbox
+-- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
+-- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
 
 ----
 
-### Stamps Edit Mode Properties
+## Stamps Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Properties.jpg?raw=true)
 
-- Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Stamps properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Stamp Categories.
+Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Stamps properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Stamp Categories.
 
-- Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
+Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
 
 Lets go over each of the properties in each of the stamp category property cards
 
-- ScaleMin = single float input
-- ScaleMax = single float input
-- Altitude = single float input, and this has an icon before the label
-- Slope = single float input, and this has an icon before the label
-- Spacing = number input
-- Rot Axis = three checkboxes labeled X, Y and Z
-- Max Deg = three  number inputs labeled X, Y and Z
-- Align to normal = single checkbox
-- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our stamp properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
-
-- Avoid footprint = single number input
-- Self Overlap = single checkbox
-- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
-- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
+-- ScaleMin = single float input
+-- ScaleMax = single float input
+-- Altitude = single float input, and this has an icon before the label
+-- Slope = single float input, and this has an icon before the label
+-- Spacing = number input
+-- Rot Axis = three checkboxes labeled X, Y and Z
+-- Max Deg = three  number inputs labeled X, Y and Z
+-- Align to normal = single checkbox
+-- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our stamp properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
+-- Avoid footprint = single number input
+-- Self Overlap = single checkbox
+-- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
+-- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
 
 Its not lots on me that Stamps is exactly the same is Environmental, and that is by design.. the only difference is Environmental stay in the scene to be rendered.. stamps add or remove to the terrain and then go away and never are rendered.. but they very much want to have the same fine tuning features.. hence, they are the same, but different.
 
 ---
-### Lighting Edit Mode Properties
+## Lighting Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Properties.jpg?raw=true)
 
-- Very simple set of properties here. We have two cards here, one "Day / Night System" and the other "Atmosphere". Both these cards have a expand / collapse toggle button to the right of their labels.
-
+Very simple set of properties here. We have two cards here, one "Day / Night System" and the other "Atmosphere". Both these cards have a expand / collapse toggle button to the right of their labels.
 Lets go over each property in both cards:
 
-- Day / Night System
+### Day / Night System
 -- Day Start Hour = number input that can't be below 1 or greater than 24
 -- Night Start Hour = number input that can't be below 1 or greater than 24
 -- Day Length = number input
 -- Night Length = number input
 
-- Atmosphere
+### Atmosphere
 -- Density = float input
 -- Offset = number input
 -- Color = native color picker
@@ -263,21 +264,20 @@ Lets go over each property in both cards:
 
 ---
 
-### Cave Edit Mode Properties
+## Cave Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
 
 Very simple set of properties here. We have two cards here, one "Cave Entrance" and the other "Cave Shape". Both these cards have a expand / collapse toggle button to the right of their labels.
-
 Lets go over each property in both cards:
 
-- Cave Entrance
+### Cave Entrance
 -- Amplitude = float input
 -- Direction = two float inputs labeled min and max
 -- Threshold = float input
 -- Frequency = float input
 -- Start of Z Fracture = float input
 
-- Cave Shape
+### Cave Shape
 -- Tube count = number input
 -- Tube Length = two float inputs labeled min and max
 -- Tube radius = number input
@@ -287,11 +287,10 @@ Lets go over each property in both cards:
 ### Settings Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
 
-- Very simple set of properties here. We have a single relevant cards here called  "World Settings". This is what appears when user clicks the cog settings icon in the main toolbar.
-
+Very simple set of properties here. We have a single relevant cards here called  "World Settings". This is what appears when user clicks the cog settings icon in the main toolbar.
 Lets go over each property in both cards:
 
--- Cave Entrance
+#### World Settings
 -- Seed = number input
 -- Vox = number input
 -- ResolutionXZ = number input
@@ -321,15 +320,17 @@ Next we will move into preview window and its features, as well as how they diff
 Lets break down the preview window features before anything else. 
 Its important to note that we have two "Views" to the preview window. 2D and 3D views as well as supporting features that we will go over below.
 
-(First screenshot shows the dropdown while open)
-
 ![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Sample-Size-Dropdown.jpg?raw=true) <br/>
 We have a dropdown in the upper left hand corner that defines our preview sample size.  <br/>
 ![preview window sample dropdown opwn](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Sample-Size-Dropdown-Open.jpg?raw=true) <br/>
 There are only three options ever 1024x1024, 512x512 and 256x256. This is just a preview sample size, not the actual size of our biome / terrain. There is a hover state and selected state when mousing over this dropdown (honestly like how all our dropdowns should be colored for different states if you ask me).
 
 
-* We have some controls in the upper right hand corner that defines a few features.
+We have some controls in the upper right hand corner that defines a few features:
+
+![preview window sample dropdown opwn](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Controls-2D-View.jpg?raw=true)
+![preview window sample dropdown opwn](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Controls-3D-View.jpg?raw=true) <br/>
+
 -- Grid icon (only enabled to be toggled on and off when in 2D view) that when clicked puts a grid over the preview window to help better visualize 2D pixel cells.
 -- 2D / 3D button. Clicking 2D will put the preview window into 2D view (first screenshot), clicking 3D will put preview window into 3D view (second screenshot).
 -- Zoom button. Clicking this will flyout two more buttons (plus and minus icons)that zooms our sample size in and out in either 2D or 2D view.
@@ -340,10 +341,10 @@ There are only three options ever 1024x1024, 512x512 and 256x256. This is just a
 Lets now talk about 2D and 3D views.
 ## Preview Window Different Views
 
-## 2D View
+### 2D View
 Because we can't generate images via roblox API, the preview window's 2D mode must be a big grid of GUI frames that very their values between black and white for some edit modes, or a full color value in other edit modes (we will go over the rules for that over each of the requirements for preview window across the different edit modes coming up). The grid of frames in 2D that represents our pixel approximation is defined by our sample size. Moving around using the move tool doesn't redraw all our frames, but color shifts them based on our coordinates. Rotating again does a color shift by rotating our numbers 90deg. Zoom will zoom in 5 grid cells at a time, the max you can zoom out is defined by our sample size, the min you can zoom in is down to 1 cell taking up our entire preview window. For context, our sample size is acting like a resolution of our 2D preview if you will and sample size defines our max zoom out.
 
-## 3D View 
+### 3D View 
 Should be a fixed top down 45deg view of our sample size terrain generated in 3d space. Using the preview window's move tool will require a full regen of new area in the 3D view and might take time, but this is not runtime so who cares. Rotating the 3d view will rotate the camera around our sample by 45deg (vs 90deg in 2d mode). Zoom Will zoom the camera in and out giving a better closeup view of the sample to the end user (no limits yet on zoom, but I'm sure there will be some set at some point). Choosing a different sample size in 3D will make the generated terrain preview area larger or smaller for the end user.
 
 Ok lets move into each edit modes unique usage of 2D and 3D views.
@@ -385,7 +386,10 @@ Next up is Environmental Edit mode.
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
 ![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Stamps-Edit-Mode-3D-preview.jpg?raw=true) <br/>
-- 3D view mode will now include Biome edit mode shape, Material edit mode painting, Environment Models and how stamped deformations in the terrain which help to break up repeated patterns.
+- 3D view mode will now include Biome edit mode shape, Material edit mode painting, Environment Models and now stamps. 
+
+However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
 
 ---
 
@@ -393,10 +397,16 @@ Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mo
 Lighting does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
 ![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Mode-3D-preview.jpg?raw=true) <br/>
-- 3D view mode will now include Biome, Material, Environmental, Stamps now, but the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
+- 3D view mode will now include Biome, Material, Environmental, Stamps now. 
+
+However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
 
 ### Cave Edit Mode
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
 ![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view mode will now include Biome, Material, Environmental, Stamps now, but the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
+
+However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
