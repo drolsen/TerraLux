@@ -123,26 +123,26 @@ Lets go over each of the properties in each of the cards.
 -- Elevation Trend = float number input
 
 #### Fractals
--- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
--- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
 #### Ridges
--- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
--- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+ Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
 #### Warping
--- Amplitude = two float number inputs; one for small (S), and one for large (L)
--- Frequency = two float number inputs; one for small (S), and one for large (L)
+- Amplitude = two float number inputs; one for small (S), and one for large (L)
+- Frequency = two float number inputs; one for small (S), and one for large (L)
 
 #### Crevasses
--- Depth Amplitude = single float number input
--- Direction = two float number input; one for X and one for Y
--- Sharp Exponent = single float number input
--- Space Frequency = single float number input
+- Depth Amplitude = single float number input
+- Direction = two float number input; one for X and one for Y
+- Sharp Exponent = single float number input
+- Space Frequency = single float number input
 
 #### Terraces
--- Sharp Exponent = single float number input
--- Space Frequency = single float number input
+- Sharp Exponent = single float number input
+- Space Frequency = single float number input
 
 ----
 ## Materials Edit Mode Properties
@@ -177,16 +177,16 @@ Lets go over each of the properties in each of the cards:
 
 ### Material preview 
 is just a normal preview of the available terrain material for a visual representation.
--- Apply = checkbox which applies this material to our terrain (on / off switch if you will)
--- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
--- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
+- Apply = checkbox which applies this material to our terrain (on / off switch if you will)
+- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
+- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
 
 ### Material Filters 
 In the event that the material is not layer 0 (base material), users can add as many of what are called "filters" and define at what altitude, should slopes or curves of particular degrees should be painted with said material. There is a plus button next to the "Material Filters" title, that upon being clicked will add a new filter subcard with zeroed out values in fields, and a title that reads "New Filter" to encourage the user to name it. Each filter added is a subcard with a heading. In the headings there is a remove button, title and expand / collapse icon. Double clicking the title in these headings allows users to rename them, clicking remove will remove the filter (but first ask the user if they are sure with a confirmation dialog of some kind). Clicking expand / collapse will collapse the filter card or expand it to be edited.
 
--- Altitude = float / number sequence input
--- Slope = float / number sequence input
--- Curve = float / number sequence input
+- Altitude = float / number sequence input
+- Slope = float / number sequence input
+- Curve = float / number sequence input
 
 ----
 
@@ -200,19 +200,19 @@ Each card has a heading with title of provided category name, a color picker, an
 
 Lets go over each of the properties in each of the environmental category property cards
 
--- ScaleMin = single float input
--- ScaleMax = single float input
--- Altitude = single float input, and this has an icon before the label
--- Slope = single float input, and this has an icon before the label
--- Spacing = number input
--- Rot Axis = three checkboxes labeled X, Y and Z
--- Max Deg = three  number inputs labeled X, Y and Z
--- Align to normal = single checkbox
--- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our environmental properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
--- Avoid footprint = single number input
--- Self Overlap = single checkbox
--- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
--- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
+- ScaleMin = single float input
+- ScaleMax = single float input
+- Altitude = single float input, and this has an icon before the label
+- Slope = single float input, and this has an icon before the label
+- Spacing = number input
+- Rot Axis = three checkboxes labeled X, Y and Z
+- Max Deg = three  number inputs labeled X, Y and Z
+- Align to normal = single checkbox
+- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our environmental properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
+- Avoid footprint = single number input
+- Self Overlap = single checkbox
+- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
+- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
 
 ----
 
@@ -225,19 +225,19 @@ Each card has a heading with title of provided category name, a color picker, an
 
 Lets go over each of the properties in each of the stamp category property cards
 
--- ScaleMin = single float input
--- ScaleMax = single float input
--- Altitude = single float input, and this has an icon before the label
--- Slope = single float input, and this has an icon before the label
--- Spacing = number input
--- Rot Axis = three checkboxes labeled X, Y and Z
--- Max Deg = three  number inputs labeled X, Y and Z
--- Align to normal = single checkbox
--- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our stamp properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
--- Avoid footprint = single number input
--- Self Overlap = single checkbox
--- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
--- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
+- ScaleMin = single float input
+- ScaleMax = single float input
+- Altitude = single float input, and this has an icon before the label
+- Slope = single float input, and this has an icon before the label
+- Spacing = number input
+- Rot Axis = three checkboxes labeled X, Y and Z
+- Max Deg = three  number inputs labeled X, Y and Z
+- Align to normal = single checkbox
+- Avoid Categories = This a listing of subcards that the user can build up. There is a title and a plus button. When user clicks plus button a new entry with the name <New Avoid Category> is added to our sub listing below it. This listing has a fixed height with a scrollbar so the user can add as many in here as they like. Once an avoid category is added user can double click the name to have that name turn into a drop down list of all available Categories added in our stamp properties (minus the current one). User pick from the dropdown list, dropdown closes and after ensuring that user has not already added this Category to the avoid category listing already, captures their selection and sets the entries title to selected name. Select box goes away and title is shown again. Off to the right of each avoid category listed item's title, is a remove button. Clicking this will remove that entry after confirming the user that they are sure they want to do that (confirmation dialog).
+- Avoid footprint = single number input
+- Self Overlap = single checkbox
+- Allowed Materials = again another sub list here with a scroll bar, but this is not user curated, but instead just lists all the available materials terrains can have. Each listing has a tiny preview of the material, a title with the name of the material and a checkbox that by default should be unchecked.
+- Models = again another sub list here that is user curated of models for this category. Off to the right of the Models title is a blue plus button. Once clicked it will add a new entry with a title of "Please pick model". Each entry here has a remove button, a title, and a object value field. (Ignore the expand / collapse toggle on these entries in the comp.. this was an oversight). When clicking the object value field, user is primed to select a model out in their project. Once a model has been assigned, the name of that model gets inherited onto the entries title. If use clicks remove, it will remove that entry after having confirmed with they user they are sure they want to do so (confirmation dialog again).
 
 Its not lots on me that Stamps is exactly the same is Environmental, and that is by design.. the only difference is Environmental stay in the scene to be rendered.. stamps add or remove to the terrain and then go away and never are rendered.. but they very much want to have the same fine tuning features.. hence, they are the same, but different.
 
@@ -249,18 +249,18 @@ Very simple set of properties here. We have two cards here, one "Day / Night Sys
 Lets go over each property in both cards:
 
 ### Day / Night System
--- Day Start Hour = number input that can't be below 1 or greater than 24
--- Night Start Hour = number input that can't be below 1 or greater than 24
--- Day Length = number input
--- Night Length = number input
+- Day Start Hour = number input that can't be below 1 or greater than 24
+- Night Start Hour = number input that can't be below 1 or greater than 24
+- Day Length = number input
+- Night Length = number input
 
 ### Atmosphere
--- Density = float input
--- Offset = number input
--- Color = native color picker
--- Decay = native color picker
--- Glare = number input
--- Haze = number input
+- Density = float input
+- Offset = number input
+- Color = native color picker
+- Decay = native color picker
+- Glare = number input
+- Haze = number input
 
 ---
 
@@ -271,16 +271,16 @@ Very simple set of properties here. We have two cards here, one "Cave Entrance" 
 Lets go over each property in both cards:
 
 ### Cave Entrance
--- Amplitude = float input
--- Direction = two float inputs labeled min and max
--- Threshold = float input
--- Frequency = float input
--- Start of Z Fracture = float input
+- Amplitude = float input
+- Direction = two float inputs labeled min and max
+- Threshold = float input
+- Frequency = float input
+- Start of Z Fracture = float input
 
 ### Cave Shape
--- Tube count = number input
--- Tube Length = two float inputs labeled min and max
--- Tube radius = number input
+- Tube count = number input
+- Tube Length = two float inputs labeled min and max
+- Tube radius = number input
 
 ---
 
@@ -291,24 +291,24 @@ Very simple set of properties here. We have a single relevant cards here called 
 Lets go over each property in both cards:
 
 #### World Settings
--- Seed = number input
--- Vox = number input
--- ResolutionXZ = number input
--- Tile Size = float input
--- Chunk XZ Size = number input (comp shows float, ignore that comp)
--- Chunk Y Size = number input (comp show float, ignore that comp)
--- Y Min World =  float input
--- Y Headroom = float input
--- World Start Z Position = float input
--- Biome Shape Blend Size = float input
--- Biome Mat Blend Size = float input
--- Crust Above Size = float input
--- Crust Below Size = float input
--- Stamp Above Size = float input
--- Stamp Below Size = float input
--- Cave Above Size = float input
--- Cave Below Size = float input
--- Min Y = float input
+- Seed = number input
+- Vox = number input
+- ResolutionXZ = number input
+- Tile Size = float input
+- Chunk XZ Size = number input (comp shows float, ignore that comp)
+- Chunk Y Size = number input (comp show float, ignore that comp)
+- Y Min World =  float input
+- Y Headroom = float input
+- World Start Z Position = float input
+- Biome Shape Blend Size = float input
+- Biome Mat Blend Size = float input
+- Crust Above Size = float input
+- Crust Below Size = float input
+- Stamp Above Size = float input
+- Stamp Below Size = float input
+- Cave Above Size = float input
+- Cave Below Size = float input
+- Min Y = float input
 
 The comp shows more properties cards below, but this is just a representation in how you can toggle open and close the World properties while under any of the edit modes.
 
@@ -331,12 +331,12 @@ We have some controls in the upper right hand corner that defines a few features
 ![preview window sample dropdown opwn](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Controls-2D-View.jpg?raw=true)
 ![preview window sample dropdown opwn](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Controls-3D-View.jpg?raw=true) <br/>
 
--- Grid icon (only enabled to be toggled on and off when in 2D view) that when clicked puts a grid over the preview window to help better visualize 2D pixel cells.
--- 2D / 3D button. Clicking 2D will put the preview window into 2D view (first screenshot), clicking 3D will put preview window into 3D view (second screenshot).
--- Zoom button. Clicking this will flyout two more buttons (plus and minus icons)that zooms our sample size in and out in either 2D or 2D view.
--- Move button. Clicking this will flyout number inputs for X and Y for user to move to specific spots in our biome terrain and have it be sampled in our preview. Limits to how far you can move are defined by your biome size, this is the area you can move your preview window around in.
--- Rotate button. Clicking this will flyout two buttons with left and right arrows. These will rotate the fixed camara around the preview sample by 45deg in 3D mode, 90deg in 2D mode.
--- Lower left corner of the preview is arrows to denote a window resize drag spot; nothing more. User clicks and drags here, and they are resizing the window. Resizing however must maintain aspect ratio in order to respect our 2D grid zooming below (I think).
+- Grid icon (only enabled to be toggled on and off when in 2D view) that when clicked puts a grid over the preview window to help better visualize 2D pixel cells.
+- 2D / 3D button. Clicking 2D will put the preview window into 2D view (first screenshot), clicking 3D will put preview window into 3D view (second screenshot).
+- Zoom button. Clicking this will flyout two more buttons (plus and minus icons)that zooms our sample size in and out in either 2D or 2D view.
+- Move button. Clicking this will flyout number inputs for X and Y for user to move to specific spots in our biome terrain and have it be sampled in our preview. Limits to how far you can move are defined by your biome size, this is the area you can move your preview window around in.
+- Rotate button. Clicking this will flyout two buttons with left and right arrows. These will rotate the fixed camara around the preview sample by 45deg in 3D mode, 90deg in 2D mode.
+- Lower left corner of the preview is arrows to denote a window resize drag spot; nothing more. User clicks and drags here, and they are resizing the window. Resizing however must maintain aspect ratio in order to respect our 2D grid zooming below (I think).
 
 Lets now talk about 2D and 3D views.
 ## Preview Window Different Views
