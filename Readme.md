@@ -1,7 +1,10 @@
+#TaraLux Plugin Specs
+
 First lets start with the high level UI overview.
+This shows all the primary areas of our plugin:
 
 ![layout of our plugin](https://github.com/drolsen/terralux/blob/main/comps/Plugin-Layout.jpg?raw=true)
-This shows all the primary areas of our plugin:
+
 - Main toolbar = Where we define our biomes to start working on terrains as well as switch between different edit modes.
 - Properties Window = Is where each edit mode's available properties are presented to use to tweak and fine tune.
 - Preview Window = Is where we get to preview the changes of our properties across all our different edit modes. 
@@ -12,17 +15,23 @@ Simple requirements here:
 - When resizing the window, the main toolbar remains a fixed Y size, but can resize in the X.
 
 ---
-
+## First Time Opening Plugin
+This is our view of our plugin the very first time being opened never having opened the plugin up before:
 ![first time opening plugin](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)
-This is our view of our plugin the very first time being opened never having opened the plugin up before.
 
-Lets break this comp down.
+Lets break down this first comp:
 - Main tool bar has a drop down that is empty, a plus button and a series of disabled buttons. Buttons are disabled cause we have not defined our first biome yet.
 - Properties window has nothing listed in it because no biome is defined yet / selected. However window is primed with a vertical scrollbar for when there will be properties eventually.
 - Preview has nothing to preview yet because we have no defined / selected biome yet. It does however have a persistent logo of our plugin in the background until it eventually gets covered up once we have actual biome / terrains to preview.
 
-Lets talk about the dropdown/ buttons / icons you see in the Main Toolbar.
+Its expected from here that the user must make their first biome before they are able to jump into any of the editing modes for their biome and terrain.
+![creating first biome](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)
 
+Lets go over our Main Toolbar features now.
+
+## Main Toolbar
+
+### Biome Dropdown / Listing
 ![biome dropdown empty state](https://github.com/drolsen/terralux/blob/main/screenshots/Bome-Dropdown-Empty-State.jpg?raw=true)
 - Dropdown = This is where we will list all the unique biomes the user has made, they can switch between these biomes and see their complete list with this dropdown. 
 
@@ -38,6 +47,7 @@ When making a new biome, user should be put into the "Biome "edit mode automatic
 ![biome dropdown open state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Open-State.jpg?raw=true)
 Clicking on this drop down will open it and allow the user to choose between may other possible Biomes they have made in the past.
 
+### Edit Modes
 All our next buttons are disabled until the user has made at least 1 biome:
 ![disabled buttons](https://github.com/drolsen/terralux/blob/main/screenshots/Toolbar-Disabled-Buttons.jpg?raw=true)
 However once we do have at least one biome, these buttons are available to clicked. Lets go over each of these buttons.
@@ -54,7 +64,6 @@ However once we do have at least one biome, these buttons are available to click
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button-Active.jpg?raw=true)
 - Materials Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Materials edit mode which populates our properties window with all material settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button-Active.jpg?raw=true)
 - Environmental Edit = This is our Environmental settings for defining all thins like trees, rocks, boulders, vegetation (is called vegetation in our code but soon will be called environmental in code) that will be scatted across our terrain, and how they are scattered.  Once available and clicked we move into the Environmental edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
@@ -69,20 +78,23 @@ However once we do have at least one biome, these buttons are available to click
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button-Active.jpg?raw=true)
-* Cave button = This is our Cave settings for defining sub terrain cave systems.  Once available and clicked we move into the Cave edit mode, which populates our properties window with all cave settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+- Cave button = This is our Cave settings for defining sub terrain cave systems.  Once available and clicked we move into the Cave edit mode, which populates our properties window with all cave settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
 Next, we will move onto our properties requirements.
 
 ---
 
-The properties within our "properties window" of each of the above mentinoed edit modes, change from mode to mode.
-These properties are grouped into what we call cards.
+## Properties Window
+The properties within this window across each of the above mentinoed edit modes, change from mode to mode. 
+Its expected that as the user changes properties, the preview window will auto update with new changes (more on the preview window soon).
+
+### Properties Window Cards
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Card-Anatomy.jpg?raw=true)
 A basic card anatomy is a header with a heading, expand collapse toggle in the header and of course the actual properties. 
 The properties listed in a card are made up of a label on the left, and a field on the right. Please note however, not all properties listings will have a single field, some have up to three.
 Some of the fields we will support in a properties listing are number inputs, float inputs, checkboxes and color pickers. All these fields should be native studio fields, never custom ones.
-Its expected that as the user changes properties in the properties windows across these edit modes, the preview window will auto update.
 
+### Properties Window Card Sub Listings
 There are also sub listings within cards, some of these sub listings are a basic listing:
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Sublisting-Anatomy.jpg?raw=true)
 
@@ -90,9 +102,11 @@ While other sub listings are user curated:
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Curated-Sublisting-Anatomy.jpg?raw=true)
 
 
-Lets go over all the properties for each of our edit modes now.
+## Edit Mode Properties
+
+### Biome Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Properties.jpg?raw=true)
-Biome Edit Mode / Settings
+
 - Altitude Properties Card
 - Fractals Properties Card
 - Ridges Properties Card
@@ -131,9 +145,8 @@ Lets go over each of the properties in each of the cards
 -- Space Frequency = single float number input
 
 ----
-
+### Materials Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Material-Edit-Properties.jpg?raw=true)
-Material Edit Mode / Settings
 - 21 properties cards for each of the allowed terrain materials in roblox. 
 
 (Roblox's permitted terrain materials)
@@ -174,8 +187,9 @@ Lets go over each of the properties in each of the cards:
 
 ----
 
+### Environmental Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Properties.jpg?raw=true)
-## Environmental Edit Mode Properties
+
 - Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Environmental properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Environmental Categories.
 
 - Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
@@ -199,8 +213,9 @@ Lets go over each of the properties in each of the environmental category proper
 
 ----
 
+### Stamps Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Properties.jpg?raw=true)
-## Stamps Edit Mode Properties
+
 - Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Stamps properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Stamp Categories.
 
 - Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
@@ -225,9 +240,9 @@ Lets go over each of the properties in each of the stamp category property cards
 Its not lots on me that Stamps is exactly the same is Environmental, and that is by design.. the only difference is Environmental stay in the scene to be rendered.. stamps add or remove to the terrain and then go away and never are rendered.. but they very much want to have the same fine tuning features.. hence, they are the same, but different.
 
 ---
-
+### Lighting Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Properties.jpg?raw=true)
-## Lighting Edit Mode Properties
+
 - Very simple set of properties here. We have two cards here, one "Day / Night System" and the other "Atmosphere". Both these cards have a expand / collapse toggle button to the right of their labels.
 
 Lets go over each property in both cards:
@@ -248,8 +263,9 @@ Lets go over each property in both cards:
 
 ---
 
+### Cave Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
-## Cave Edit Mode Properties
+
 Very simple set of properties here. We have two cards here, one "Cave Entrance" and the other "Cave Shape". Both these cards have a expand / collapse toggle button to the right of their labels.
 
 Lets go over each property in both cards:
@@ -268,8 +284,9 @@ Lets go over each property in both cards:
 
 ---
 
+### Settings Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
-## Settings Edit Mode Properties
+
 - Very simple set of properties here. We have a single relevant cards here called  "World Settings". This is what appears when user clicks the cog settings icon in the main toolbar.
 
 Lets go over each property in both cards:
