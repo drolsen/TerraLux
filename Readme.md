@@ -342,9 +342,12 @@ Lets now talk about 2D and 3D views.
 ## Preview Window Different Views
 
 ### 2D View
+![preview window in 2d view with grid](https://github.com/drolsen/terralux/blob/main/comps/Preview-2D-View-With-Grid.jpg?raw=true)
+![preview window in 2d view with grid](https://github.com/drolsen/terralux/blob/main/comps/Preview-2D-View-Without-Grid.jpg?raw=true)
 Because we can't generate images via roblox API, the preview window's 2D mode must be a big grid of GUI frames that very their values between black and white for some edit modes, or a full color value in other edit modes (we will go over the rules for that over each of the requirements for preview window across the different edit modes coming up). The grid of frames in 2D that represents our pixel approximation is defined by our sample size. Moving around using the move tool doesn't redraw all our frames, but color shifts them based on our coordinates. Rotating again does a color shift by rotating our numbers 90deg. Zoom will zoom in 5 grid cells at a time, the max you can zoom out is defined by our sample size, the min you can zoom in is down to 1 cell taking up our entire preview window. For context, our sample size is acting like a resolution of our 2D preview if you will and sample size defines our max zoom out.
 
 ### 3D View 
+![first time opening plugin](https://github.com/drolsen/terralux/blob/main/comps/Preview-3D-View.jpg?raw=true)
 Should be a fixed top down 45deg view of our sample size terrain generated in 3d space. Using the preview window's move tool will require a full regen of new area in the 3D view and might take time, but this is not runtime so who cares. Rotating the 3d view will rotate the camera around our sample by 45deg (vs 90deg in 2d mode). Zoom Will zoom the camera in and out giving a better closeup view of the sample to the end user (no limits yet on zoom, but I'm sure there will be some set at some point). Choosing a different sample size in 3D will make the generated terrain preview area larger or smaller for the end user.
 
 Ok lets move into each edit modes unique usage of 2D and 3D views.
