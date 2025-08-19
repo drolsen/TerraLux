@@ -1,4 +1,4 @@
-#TaraLux Plugin Specs
+# TaraLux Plugin Specs
 
 First lets start with the high level UI overview.
 This shows all the primary areas of our plugin:
