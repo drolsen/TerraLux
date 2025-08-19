@@ -104,8 +104,10 @@ While other sub listings are user curated: <br/>
 ## Edit Mode Properties
 
 ### Biome Edit Mode Properties
+<div width="30%">
 ![biome edit mode properties](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Properties.jpg?raw=true)
-
+</div>
+<div width="70%">
 - Altitude Properties Card
 - Fractals Properties Card
 - Ridges Properties Card
@@ -142,7 +144,7 @@ Lets go over each of the properties in each of the cards
 -Terraces
 -- Sharp Exponent = single float number input
 -- Space Frequency = single float number input
-
+</div>
 ----
 ### Materials Edit Mode Properties
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Material-Edit-Properties.jpg?raw=true) <br/>
