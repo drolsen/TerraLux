@@ -445,3 +445,151 @@ Important part to know right now is that we indeed what to have a persistent ses
 
 # Plugin Iconography
 We have a lot of icons to this plugin, and all of them can be found in our icons folder. Each should be named according to the section they live in (Main Toolbar, Properties window, Preview window) and given a name that describes their feature.
+
+Perfect — that’s exactly what I needed.
+Here’s how I’d update your **Readme.md verbatim-style**, so those questions won’t come up again when anyone (including future-you 😏) reads it.
+
+---
+
+# Clarifications
+
+1. **Scope of Settings**
+
+   > *Only the existing settings and properties defined in this specification are supported. No additional or custom parameters will be exposed beyond what is outlined here.*
+
+2. **Runtime vs Build-time**
+
+   > *This plugin currently focuses only on runtime JSON configuration. Build-time terrain generation support will come later and is not part of this version.*
+
+3. **JSON Output Structure**
+
+   > *All plugin changes are written to a single monolithic JSON file. Biomes, world settings, and all other properties are combined into this file rather than stored separately.*
+
+4. **World Settings**
+
+   > *World-level properties (resolution, grid size, tile dimensions, seed, etc.) are already exposed in the World Settings panel as shown in the design comps. These values are directly editable from the plugin UI.*
+
+5. **World Seed Input**
+
+   > *World seed is exposed as a numeric input field. Randomization support may be added later, but is not included in the current version.*
+
+6. **Presets**
+
+   > *World and biome presets are not available yet. They will be introduced once the core plugin tool is stable and functional.*
+
+7. **Height / Noise Layers**
+
+   > *Noise layers are already represented as amplitude and frequency (Small, Medium, Large) inputs in the plugin UI. No additional layers or UI types will be added beyond what is specified in the comps.*
+
+8. **Experimental Fields**
+
+   > *Some properties (such as filters in materials and environmental edits) already use number sequence fields instead of simple numeric inputs. These are the only experimental input types included — stick to the specs for all others.*
+
+9. **Caves / Crevices / Cones**
+
+   > *All cave, crevice, and cone properties listed in the core scripts are already mapped to number inputs in the plugin UI. These features are disabled by simply not using them (e.g., setting amplitude to 0). There are no explicit on/off toggles at this stage.*
+
+10. **Biome Boilerplate JSON**
+
+    > *The plugin ships with a boilerplate JSON file. On first launch, this file is established and loaded. From then on, all changes are made directly to this file and it is reloaded each time the plugin starts.*
+
+11. **Monolithic Biome Storage**
+
+    > *All biomes are stored in the same monolithic JSON file. They are not broken into separate files.*
+
+12. **Biome Assets**
+
+    > *Biome asset selectors are ObjectValue fields pointing to models within the user’s project, not asset IDs. These allow users to bind in-project models directly.*
+
+13. **Materials**
+
+    > *Multiple material layers can be defined per biome. Each material can include its own filters. At least one material must be defined as layer `0` — this base layer applies across the entire terrain with no filters.*
+
+14. **Vegetation & Stamps**
+
+    > *The options shown in the specs and comps are the only vegetation and stamp controls available. No additional scatter or clustering rules are included beyond those already defined.*
+
+15. **Runtime Preview**
+
+    > *The plugin provides sample previews of biome/material edits inside the UI. Full results are always evaluated at runtime with the terrain generator.*
+
+16. **Performance Controls**
+
+    > *Performance-related settings (e.g., MAX\_GEN\_JOBS, ERASE\_STEPS\_PER\_TICK) are considered engine-level and are not exposed in the plugin UI.*
+
+17. **Profiles / Platform Configs**
+
+    > *No platform-specific profiles (e.g., PC vs tablet) are currently supported.*
+
+18. **Import / Export**
+
+    > *Export options may be introduced later, but are not part of the current version. Importing JSON back into the plugin is not currently supported, though this may be considered in the future.*
+
+19. **Versioning & Undo**
+
+    > *The plugin does not support versioned config saves. Instead, a simple undo/redo history (Ctrl+Z) will be provided for user edits.*
+
+20. **UI Design Rules**
+
+    > *The plugin UI follows the design comps: inline `label:value` fields, studio-native dropdowns (with hover/open/close states), and ObjectValue selectors for project assets. There are no sliders, custom dropdown widgets, or tooltips beyond what is shown in the comps.*
+
+🔥 Nice — crystal clear.
+Here’s how you’d “Readme-proof” those answers so nobody (including me 😅) ever asks them again:
+
+
+21. **JSON Storage Location**
+
+   > *The plugin saves its monolithic JSON config to a location obscured from the user’s game project. This ensures it does not clutter developer assets, while still being fully accessible to the runtime system.*
+
+22. **JSON Formatting**
+
+   > *The JSON is always saved in human-readable (pretty-printed) format for easier debugging and editing if needed.*
+
+23. **Save Behavior**
+
+   > *All changes are automatically saved to JSON as soon as the user makes them. There is no manual Save/Export step in this version.*
+
+24. **Invalid Input Handling**
+
+   > *If a user enters an invalid value (e.g., out-of-range, non-numeric), the plugin ignores the input and makes no change. This fail-safe prevents corrupting the JSON file.*
+
+25. **Preview Window**
+
+   > *The preview window uses a grid of UIFrames sized by the sample-size dropdown. This is a **visual approximation** of a heightmap or splatmap — it is not an actual terrain preview but a representative pattern of the current settings.*
+
+26. **Preview State**
+
+   > *The plugin does not preserve collapsed/expanded panel states between sessions.*
+
+27. **New Biomes**
+
+   > *When a new biome is created, it is initialized with default starting values.*
+
+28. **Biome Renaming**
+
+   > *Biomes cannot be renamed in this version. They retain the names assigned by the boilerplate template.*
+
+29. **Asset Selection**
+
+   > *When selecting models (e.g., for vegetation or rocks), the user manually clicks the model in Explorer. The plugin then records that model’s name in the JSON.*
+
+30. **Model Validation**
+
+> *All models must have a defined PrimaryPart. Models without a PrimaryPart are rejected by the plugin.*
+
+31. **Docking / Panel Behavior**
+
+> *The plugin is not currently dockable as a permanent Studio side panel. It exists as its own floating window.*
+
+32. **Error Feedback**
+
+> *Errors such as missing JSON properties or invalid entries are not surfaced to the user. The plugin simply fails silently with no change applied.*
+
+33. **Presets**
+
+> *Biome/world presets will be implemented later as separate files. When available, users will be able to apply a preset to the currently edited biome, but this is not part of the current version.*
+
+34. **Schema Versioning**
+
+> *The plugin does not embed schema version numbers or metadata in the JSON at this stage.*
+
