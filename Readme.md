@@ -57,7 +57,7 @@ However once we do have at least one biome, these buttons are available to click
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button-Active.jpg?raw=true) <br/>
--  Biome Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Biome edit mode which populates our properties window with all biome settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+- Biome Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Biome edit mode which populates our properties window with all biome settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button-Active.jpg?raw=true) <br/>
@@ -119,8 +119,8 @@ Each property has a divider line, left aligned label and a right aligned field(s
 
 Lets go over each of the properties in each of the cards.
 #### Altitude
--- Max Altitude = float number input
--- Elevation Trend = float number input
+- Max Altitude = float number input
+- Elevation Trend = float number input
 
 #### Fractals
 - Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
