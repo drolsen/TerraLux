@@ -29,7 +29,7 @@ Simple requirements here:
 ---
 ## First Time Opening Plugin
 This is our view of our plugin the very first time being opened never having opened the plugin up before:
-![first time opening plugin](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)
+![first time opening plugin](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Plugin-Open.jpg?raw=true)
 
 Lets break down this first comp:
 - Main tool bar has a drop down that is empty, a plus button and a series of disabled buttons. Buttons are disabled cause we have not defined our first biome yet.
