@@ -1,6 +1,7 @@
 First lets start with the high level UI overview.
 
-Plugin-Layout.jpg within project files shows you all the primary areas of our plugin:
+![alt text](https://github.com/drolsen/terralux/blob/main/screenshots/Plugin-Layout.jpg?raw=true)
+This shows all the primary areas of our plugin:
 - Main toolbar = Where we define our biomes to start working on terrains as well as switch between different edit modes.
 - Properties Window = Is where each edit mode's available properties are presented to use to tweak and fine tune.
 - Preview Window = Is where we get to preview the changes of our properties across all our different edit modes. 
