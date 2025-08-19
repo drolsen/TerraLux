@@ -169,9 +169,9 @@ task.spawn(function()
 end)
 ```
 
-\##Biomes (Module script)
+## Biomes (Module script)
 
-```
+```lua
 -- Biomes (Module script, micro-optimized)
 -- Purpose:
 --   Defines biome material sets, atmosphere presets, and shape parameters.
