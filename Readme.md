@@ -192,8 +192,8 @@ Lets go over each of the properties in each of the cards:
 ### Material preview 
 is just a normal preview of the available terrain material for a visual representation.
 - Apply = checkbox which applies this material to our terrain (on / off switch if you will)
-- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
-- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
+- Layer = number input. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
+- Color = Studio color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
 
 ### Material Filters 
 In the event that the material is not layer 0 (base material), users can add as many of what are called "filters" and define at what altitude, should slopes or curves of particular degrees should be painted with said material. There is a plus button next to the "Material Filters" title, that upon being clicked will add a new filter subcard with zeroed out values in fields, and a title that reads "New Filter" to encourage the user to name it. Each filter added is a subcard with a heading. In the headings there is a remove button, title and expand / collapse icon. Double clicking the title in these headings allows users to rename them, clicking remove will remove the filter (but first ask the user if they are sure with a confirmation dialog of some kind). Clicking expand / collapse will collapse the filter card or expand it to be edited.
@@ -235,7 +235,7 @@ Lets go over each of the properties in each of the environmental category proper
 
 Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Stamps properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Stamp Categories.
 
-Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
+Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Studio color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
 
 Lets go over each of the properties in each of the stamp category property cards
 
@@ -271,8 +271,8 @@ Lets go over each property in both cards:
 ### Atmosphere
 - Density = float input
 - Offset = number input
-- Color = native color picker
-- Decay = native color picker
+- Color = studio color picker
+- Decay = studio color picker
 - Glare = number input
 - Haze = number input
 
