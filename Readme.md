@@ -37,7 +37,7 @@ Lets break down this first comp:
 - Preview has nothing to preview yet because we have no defined / selected biome yet. It does however have a persistent logo of our plugin in the background until it eventually gets covered up once we have actual biome / terrains to preview.
 
 Its expected from here that the user must make their first biome before they are able to jump into any of the editing modes for their biome and terrain.
-![creating first biome](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)
+![creating first biome](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)<br/>
 
 Lets go over our Main Toolbar features now.
 
@@ -61,7 +61,9 @@ Clicking on this drop down will open it and allow the user to choose between may
 ### Edit Modes
 All our next buttons are disabled until the user has made at least 1 biome: <br/>
 ![disabled buttons](https://github.com/drolsen/terralux/blob/main/screenshots/Toolbar-Disabled-Buttons.jpg?raw=true) <br/>
-However once we do have at least one biome, these buttons are available to clicked. Lets go over each of these buttons.
+However once we do have at least one biome, these buttons are available to clicked with default an active states. 
+
+Lets go over each of these buttons:
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button-Active.jpg?raw=true) <br/>
