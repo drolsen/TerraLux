@@ -352,19 +352,19 @@ Ok lets move into each edit modes unique usage of 2D and 3D views.
 ---
 
 ## Biome Edit Mode (First screenshot) 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Biome-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view shows a black and white approximation representation of our Biome amplitude and frequency etc settings that is used to generate our terrain shape. This gives artist a quick unique view into how their terrain shape is changing over various Biome edit settings, without committing to a full terrain generate. (Second screenshot) 
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Biome-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view is a devoid of anything environmental models, no material work and is purely focused on showing off terrain's shape.. the bare shape. I recommend here in this edit mode we generate the terrain with a snow material and set its color to something like that of a mudbox red. The third and fourth screenshots show our Biome Edit Mode in full. Next is Material Edit mode.
 
 ---
 
 ## Material Edit Mode
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view shows uses our defined colors we set in the header of each material properties card (firsts screenshot) as an approximation representation of our applied material locations (second screenshot). In our example here, we defined our grass material to be a layer of 0, so its applied first and over the entire terrain, and we gave it a preview color of red. Next we set a brick material to apply, give it a layer number, applied some filtering to it across slopes or curves and set its preview color to green. Lastly we applied cobble stone, set a layer number, applied some filtering to it and gave it a preview color of blue. The result in our 2D view here should be showing us a grid pixel approximation representation of each of our materials applicable areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Biome 3D preview, except here we are actually applying our materials now.
 
 In conjunction, these two views give the artist a way to quick observe where their materials are being painted in 2D mode, then can jump into 3D mode and observe them.
@@ -374,10 +374,10 @@ Next up is Environmental Edit mode.
 ---
 
 ## Environmental Edit Mode
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view uses our defined colors we set in the header of each groups properties card  as an approximation representation of our applied model's locations (second screenshot). In our example here, we defined our trees category and gave it a preview color of red. Same is true for our Cliff and Rocks categories set with preview colors of green and blue (respectively). The result in our 2D view here should be showing us a grid pixel approximation representation of each of our Environmental model's permitted position areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Materials 3D preview, except here we are actually positioning our environment category models.
 
 ---
@@ -385,28 +385,28 @@ Next up is Environmental Edit mode.
 ## Stamps Edit Mode
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Stamps-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Stamps-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view mode will now include Biome edit mode shape, Material edit mode painting, Environment Models and now stamps. 
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Preview-Toggle-Environmental.jpg?raw=true)
 
 ---
 
 ### Lighting Edit Mode
 Lighting does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Lighting-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view mode will now include Biome, Material, Environmental, Stamps now. 
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Preview-Toggle-Environmental.jpg?raw=true)
 
 ### Cave Edit Mode
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Cave-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view mode will now include Biome, Material, Environmental, Stamps now, but the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Toggle-Environmental.jpg?raw=true)
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Preview-Toggle-Environmental.jpg?raw=true)
