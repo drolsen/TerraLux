@@ -51,31 +51,31 @@ All our next buttons are disabled until the user has made at least 1 biome: <br/
 ![disabled buttons](https://github.com/drolsen/terralux/blob/main/screenshots/Toolbar-Disabled-Buttons.jpg?raw=true) <br/>
 However once we do have at least one biome, these buttons are available to clicked. Lets go over each of these buttons.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button-Active.jpg?raw=true) <br/>
 - World Settings = Its disabled until user has at least 1 biome created / selected. Once available and clicked, a grouping of global properties shows up in our properties window (always the top) and button remains in a clicked state. Click it again and global properties grouping goes away in properties window.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button-Active.jpg?raw=true) <br/>
 -  Biome Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Biome edit mode which populates our properties window with all biome settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button-Active.jpg?raw=true) <br/>
 - Materials Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Materials edit mode which populates our properties window with all material settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button-Active.jpg?raw=true) <br/>
 - Environmental Edit = This is our Environmental settings for defining all thins like trees, rocks, boulders, vegetation (is called vegetation in our code but soon will be called environmental in code) that will be scatted across our terrain, and how they are scattered.  Once available and clicked we move into the Environmental edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Button-Active.jpg?raw=true) <br/>
 - Stamp Edit = This is our Stamp settings for defining model parts that will be stamped into the terrain to breakup repeated surfaces. This is done by calculating the volume of parts and using a fill on that volume of terrain after part has been place on the terrain like an Environmental. Once available and clicked we move into the Stamp edit mode, which populates our properties window with all stamp settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Button-Active.jpg?raw=true) <br/>
 - Lighting Edit = This is our Lighting and atmosphere settings for defining camera fog color, offset and density as well as a day / night system.  Once available and clicked we move into the Lighting edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button.jpg?raw=true) <br/>
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button.jpg?raw=true)
 ![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button-Active.jpg?raw=true) <br/>
 - Cave button = This is our Cave settings for defining sub terrain cave systems.  Once available and clicked we move into the Cave edit mode, which populates our properties window with all cave settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
