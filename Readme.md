@@ -1,6 +1,6 @@
 First lets start with the high level UI overview.
 
-![alt text](https://github.com/drolsen/terralux/blob/main/comps/Plugin-Layout.jpg?raw=true)
+![layout of our plugin](https://github.com/drolsen/terralux/blob/main/comps/Plugin-Layout.jpg?raw=true)
 This shows all the primary areas of our plugin:
 - Main toolbar = Where we define our biomes to start working on terrains as well as switch between different edit modes.
 - Properties Window = Is where each edit mode's available properties are presented to use to tweak and fine tune.
@@ -13,7 +13,8 @@ Simple requirements here:
 
 ---
 
-First-Time-Making-Biome.jpg within project files is our view of our plugin the very first time being opened never having opened the plugin up before.
+![first time opening plugin](https://github.com/drolsen/terralux/blob/main/comps/First-Time-Making-Biome.jpg?raw=true)
+This is our view of our plugin the very first time being opened never having opened the plugin up before.
 
 Lets break this comp down.
 - Main tool bar has a drop down that is empty, a plus button and a series of disabled buttons. Buttons are disabled cause we have not defined our first biome yet.
@@ -22,61 +23,75 @@ Lets break this comp down.
 
 Lets talk about the dropdown/ buttons / icons you see in the Main Toolbar.
 
-Bome-Dropdown-Empty-State.jpg
+![biome dropdown empty state](https://github.com/drolsen/terralux/blob/main/screenshots/Bome-Dropdown-Empty-State.jpg?raw=true)
 - Dropdown = This is where we will list all the unique biomes the user has made, they can switch between these biomes and see their complete list with this dropdown. 
 
-Biome-Dropdown-Curate-State.jpg
+![biome dropdown plus button](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Curate-State.jpg?raw=true)
 - Plus Button = When clicked, the dropdown will be turned into a text field and the plus button replaced with a [OK] / [Cancel] confirmation buttons. User provides a unique name (no duplicate names) for their biome and clicks ok to make their first biome. Click cancel and they will jump out of the "make new biome" experience. 
 
-Biome-Dropdown-Closed-State.jpg
+![biome dropdown closed state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Closed-State.jpg?raw=true)
 In both click Ok and Cancel, dropdown and plus button comes back, but only clicking ok adds new biome to dropdown as an item and auto selects it for the user.
 
-Biome-Edit-Mode-2D-preview.jpg
+![biome dropdown curate mode](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Mode-2D-preview.jpg?raw=true)
 When making a new biome, user should be put into the "Biome "edit mode automatically (more on what Biome edit mode is soon).
 
-Biome-Dropdown-Open-State.jpg
+![biome dropdown open state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Dropdown-Open-State.jpg?raw=true)
 Clicking on this drop down will open it and allow the user to choose between may other possible Biomes they have made in the past.
 
-(Fifth/Sixth screenshot)
-- Cog Button = This is our global settings. Its disabled until user has at least 1 biome created / selected. Once available and clicked, a grouping of global properties shows up in our properties window (always the top) and button remains in a clicked state. Click it again and global properties grouping goes away in properties window.
+All our next buttons are disabled until the user has made at least 1 biome:
+![disabled buttons](https://github.com/drolsen/terralux/blob/main/screenshots/Toolbar-Disabled-Buttons.jpg?raw=true)
+However once we do have at least one biome, these buttons are available to clicked. Lets go over each of these buttons.
 
-(Seventh/Eighth screenshot)
--  Square grid = This is our Biome settings. Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Biome edit mode which populates our properties window with all biome settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button-active.jpg?raw=true)
+- World Settings = Its disabled until user has at least 1 biome created / selected. Once available and clicked, a grouping of global properties shows up in our properties window (always the top) and button remains in a clicked state. Click it again and global properties grouping goes away in properties window.
 
-(Nineth/Tenth screenshot)
-- Paint brush = This is our Materials settings. Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Materials edit mode which populates our properties window with all material settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button-Active.jpg?raw=true)
+-  Biome Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Biome edit mode which populates our properties window with all biome settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
----
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Materials-Edit-Button-Active.jpg?raw=true)
+- Materials Edit = Its disabled until user has at least 1 biome created / selected. Once available and clicked we move into the Materials edit mode which populates our properties window with all material settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-(First / Second screenshots)
 
-* Landscape button = This is our Environmental settings for defining all thins like trees, rocks, boulders, vegetation (is called vegetation in our code but soon will be called environmental in code) that will be scatted across our terrain, and how they are scattered.  Once available and clicked we move into the Environmental edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Button-Active.jpg?raw=true)
+- Environmental Edit = This is our Environmental settings for defining all thins like trees, rocks, boulders, vegetation (is called vegetation in our code but soon will be called environmental in code) that will be scatted across our terrain, and how they are scattered.  Once available and clicked we move into the Environmental edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-(Third/ Fourth screenshots)
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Button-Active.jpg?raw=true)
+- Stamp Edit = This is our Stamp settings for defining model parts that will be stamped into the terrain to breakup repeated surfaces. This is done by calculating the volume of parts and using a fill on that volume of terrain after part has been place on the terrain like an Environmental. Once available and clicked we move into the Stamp edit mode, which populates our properties window with all stamp settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-* Stamp button = This is our Stamp settings for defining model parts that will be stamped into the terrain to breakup repeated surfaces. This is done by calculating the volume of parts and using a fill on that volume of terrain after part has been place on the terrain like an Environmental. Once available and clicked we move into the Stamp edit mode, which populates our properties window with all stamp settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Button-Active.jpg?raw=true)
+- Lighting Edit = This is our Lighting and atmosphere settings for defining camera fog color, offset and density as well as a day / night system.  Once available and clicked we move into the Lighting edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-(Fifth/ Sixth screenshots)
-
-* Sun button = This is our Lighting and atmosphere settings for defining camera fog color, offset and density as well as a day / night system.  Once available and clicked we move into the Lighting edit mode, which populates our properties window with all environment settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
-
-(Seventh/ Eighth screenshots)
-
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button.jpg?raw=true)
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Button-Active.jpg?raw=true)
 * Cave button = This is our Cave settings for defining sub terrain cave systems.  Once available and clicked we move into the Cave edit mode, which populates our properties window with all cave settings and brings up our preview window for this edit mode. This button should have a active state, but can't be clicked to turn off its active state. You can only see it not in a active state when you click another edit mode.
 
-(Ninth screenshot)
-Lastly we have a small seal logo in the first right side of the Main Toolbar.
-
-Next, we will move onto our properties requirements..
+Next, we will move onto our properties requirements.
 
 ---
 
-The properties window under different edit modes presents that mode's available properties to change.
-These properties are grouped into cards with heads, expand collapse and the actual properties. Properties within cards always have a label and some kind of field.. some properties have multiple labels to denote axis as well as feature intention. Its expected that as the user changes properties in the properties windows across these edit modes, the preview window will auto update.
+The properties within our "properties window" of each of the above mentinoed edit modes, change from mode to mode.
+These properties are grouped into what we call cards.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Card-Anatomy.jpg?raw=true)
+A basic card anatomy is a header with a heading, expand collapse toggle in the header and of course the actual properties. 
+The properties listed in a card are made up of a label on the left, and a field on the right. Please note however, not all properties listings will have a single field, some have up to three.
+Some of the fields we will support in a properties listing are number inputs, float inputs, checkboxes and color pickers. All these fields should be native studio fields, never custom ones.
+Its expected that as the user changes properties in the properties windows across these edit modes, the preview window will auto update.
+
+There are also sub listings within cards, some of these sub listings are a basic listing:
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Sublisting-Anatomy.jpg?raw=true)
+
+While other sub listings are user curated:
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Properties-Curated-Sublisting-Anatomy.jpg?raw=true)
+
 
 Lets go over all the properties for each of our edit modes now.
-
-(First screenshot)
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Properties.jpg?raw=true)
 Biome Edit Mode / Settings
 - Altitude Properties Card
 - Fractals Properties Card
@@ -89,35 +104,35 @@ Each of these cards have a card heading with a title and a expand/collapse up/do
 Each property has a divider line, left aligned label and a right aligned field(s). Some properties have multiple fields for things like 2d vectors or Small / Medium / Large variants that have accompanying labels.
 
 Lets go over each of the properties in each of the cards
-##Altitude
-- Max Altitude = float number input
-- Elevation Trend = float number input
+-Altitude
+-- Max Altitude = float number input
+-- Elevation Trend = float number input
 
-##Fractals
-- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
-- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+-Fractals
+-- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+-- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
-##Ridges
-- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
-- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+- Ridges
+-- Amplitude = three float number inputs; one for small (S), one for medium (M) and one for large (L)
+-- Frequency = three float number inputs; one for small (S), one for medium (M) and one for large (L)
 
-##Warping
-- Amplitude = two float number inputs; one for small (S), and one for large (L)
-- Frequency = two float number inputs; one for small (S), and one for large (L)
+- Warping
+-- Amplitude = two float number inputs; one for small (S), and one for large (L)
+-- Frequency = two float number inputs; one for small (S), and one for large (L)
 
-##Crevasses
-- Depth Amplitude = single float number input
-- Direction = two float number input; one for X and one for Y
-- Sharp Exponent = single float number input
-- Space Frequency = single float number input
+- Crevasses
+-- Depth Amplitude = single float number input
+-- Direction = two float number input; one for X and one for Y
+-- Sharp Exponent = single float number input
+-- Space Frequency = single float number input
 
-##Terraces
-- Sharp Exponent = single float number input
-- Space Frequency = single float number input
+-Terraces
+-- Sharp Exponent = single float number input
+-- Space Frequency = single float number input
 
 ----
 
-(Second screenshot)
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Material-Edit-Properties.jpg?raw=true)
 Material Edit Mode / Settings
 - 21 properties cards for each of the allowed terrain materials in roblox. 
 
@@ -144,17 +159,13 @@ Material Edit Mode / Settings
 - Snow
 - WoodPlanks
 
-Each card has a heading with title of that terrain material name, and a expand/collapse up/down arrow. (now we understand why properties window had a scrollbar primed this whole time)
+Each card has a heading with title of that terrain material name, and a expand/collapse up/down arrow. (now we understand why properties window had a scrollbar primed this whole time).
+Lets go over each of the properties in each of the cards:
 
-- Each of the cards has a material preview, tops section and bottom section to it.
-
-Lets go over each of the properties in each of the cards
-##Material preview is just a normal preview of the available terrain material for a visual representation.
-- Apply = checkbox which applies this material to our terrain (on / off switch if you will)
-
-- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
-
-- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
+- Material preview is just a normal preview of the available terrain material for a visual representation.
+-- Apply = checkbox which applies this material to our terrain (on / off switch if you will)
+-- Layer = number input with up / down handles. Zero is as low of a number you can set on this and zero denotes that its the terrains base material.
+-- Color = Native color picker that will define that material's color for finer tuning that artist like. This really is just a middle man setting to what you find in workspace->terrain->materials already.
 
 - Material Filters = In the event that the material is not layer 0 (base material), users can add as many of what are called "filters" and define at what altitude, should slopes or curves of particular degrees should be painted with said material. There is a plus button next to the "Material Filters" title, that upon being clicked will add a new filter subcard with zeroed out values in fields, and a title that reads "New Filter" to encourage the user to name it. Each filter added is a subcard with a heading. In the headings there is a remove button, title and expand / collapse icon. Double clicking the title in these headings allows users to rename them, clicking remove will remove the filter (but first ask the user if they are sure with a confirmation dialog of some kind). Clicking expand / collapse will collapse the filter card or expand it to be edited.
 -- Altitude = float / number sequence input
@@ -163,8 +174,8 @@ Lets go over each of the properties in each of the cards
 
 ----
 
-(Third screenshot)
-Environmental Edit Mode / Settings
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Properties.jpg?raw=true)
+## Environmental Edit Mode Properties
 - Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Environmental properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Environmental Categories.
 
 - Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
@@ -188,8 +199,8 @@ Lets go over each of the properties in each of the environmental category proper
 
 ----
 
-(Fourth screenshot)
-Stamps Edit Mode / Settings
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Stamp-Edit-Properties.jpg?raw=true)
+## Stamps Edit Mode Properties
 - Top of our properties window we have text input and a plus button. Idea here is when user provides a category name (must be unique) and clicks the plus, a new Stamps properties card will be added below it and represents a "Category" that holds settings amongst possibly many other unique Stamp Categories.
 
 - Each card has a heading with title of provided category name, a color picker, and a expand/collapse up/down arrow. Name can be changed by double clicking it which turns it into a text input with current name primed for rename. Hitting enter will commit to that change, esc will exit it. Upon committing to a new category name it needs to still be guarded against duplicates as each category must be unique. Native color picker is an arbitrary color that will be used in our preview window for this mode, nothing more (More on that later).
@@ -215,8 +226,8 @@ Its not lots on me that Stamps is exactly the same is Environmental, and that is
 
 ---
 
-(Fifth screenshot)
-Lighting Edit mode
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Lighting-Edit-Properties.jpg?raw=true)
+## Lighting Edit Mode Properties
 - Very simple set of properties here. We have two cards here, one "Day / Night System" and the other "Atmosphere". Both these cards have a expand / collapse toggle button to the right of their labels.
 
 Lets go over each property in both cards:
@@ -237,9 +248,9 @@ Lets go over each property in both cards:
 
 ---
 
-(Sixth screenshot)
-Cave Edit mode
-- Very simple set of properties here. We have two cards here, one "Cave Entrance" and the other "Cave Shape". Both these cards have a expand / collapse toggle button to the right of their labels.
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
+## Cave Edit Mode Properties
+Very simple set of properties here. We have two cards here, one "Cave Entrance" and the other "Cave Shape". Both these cards have a expand / collapse toggle button to the right of their labels.
 
 Lets go over each property in both cards:
 
@@ -257,8 +268,8 @@ Lets go over each property in both cards:
 
 ---
 
-(Seventh screenshot)
-Settings Edit mode
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Cave-Edit-Properties.jpg?raw=true)
+## Settings Edit Mode Properties
 - Very simple set of properties here. We have a single relevant cards here called  "World Settings". This is what appears when user clicks the cog settings icon in the main toolbar.
 
 Lets go over each property in both cards:
@@ -289,13 +300,17 @@ Next we will move into preview window and its features, as well as how they diff
 
 ---
 
-Lets break down the preview window features before anything else. Its important to note that we have two "Views" to the preview window. 2D and 3D views as well as supporting features that we will go over below.
+## Preview Window
+Lets break down the preview window features before anything else. 
+Its important to note that we have two "Views" to the preview window. 2D and 3D views as well as supporting features that we will go over below.
 
 (First screenshot shows the dropdown while open)
 
-We have a drop down in the upper left hand corner that defines our preview sample size. There are only three options ever 1024x1024, 512x512 and 256x256. This is just a preview sample size, not the actual size of our biome / terrain. There is a hover state and selected state when mousing over this dropdown (honestly like how all our dropdowns should be colored for different states if you ask me).
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Sample-Size-Dropdown.jpg?raw=true)
+We have a dropdown in the upper left hand corner that defines our preview sample size. 
+![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Preview-Sample-Size-Dropdown-Open.jpg?raw=true)
+There are only three options ever 1024x1024, 512x512 and 256x256. This is just a preview sample size, not the actual size of our biome / terrain. There is a hover state and selected state when mousing over this dropdown (honestly like how all our dropdowns should be colored for different states if you ask me).
 
-(Second screenshot shows the flyout states of controls. Fourth screenshot shows them closed.)
 
 * We have some controls in the upper right hand corner that defines a few features.
 -- Grid icon (only enabled to be toggled on and off when in 2D view) that when clicked puts a grid over the preview window to help better visualize 2D pixel cells.
@@ -335,7 +350,7 @@ Next up is Environmental Edit mode.
 ---
 
 ## Environmental Edit Mode
-- 2D view uses our defined colors we set in the header of each groups properties card (firsts screenshot) as an approximation representation of our applied model's locations (second screenshot). In our example here, we defined our trees category and gave it a preview color of red. Same is true for our Cliff and Rocks categories set with preview colors of green and blue (respectively). The result in our 2D view here should be showing us a grid pixel approximation representation of each of our Environmental model's permitted position areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
+- 2D view uses our defined colors we set in the header of each groups properties card  as an approximation representation of our applied model's locations (second screenshot). In our example here, we defined our trees category and gave it a preview color of red. Same is true for our Cliff and Rocks categories set with preview colors of green and blue (respectively). The result in our 2D view here should be showing us a grid pixel approximation representation of each of our Environmental model's permitted position areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
 - 3D view is a just like our Materials 3D preview, except here we are actually positioning our environment category models.
 
