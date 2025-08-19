@@ -374,10 +374,10 @@ Next up is Environmental Edit mode.
 ---
 
 ## Environmental Edit Mode
-![environmental edit mode full comp 2d view](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![environmental edit mode full comp 2d view](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-2D.jpg?raw=true) <br/>
 - 2D view uses our defined colors we set in the header of each groups properties card  as an approximation representation of our applied model's locations (second screenshot). In our example here, we defined our trees category and gave it a preview color of red. Same is true for our Cliff and Rocks categories set with preview colors of green and blue (respectively). The result in our 2D view here should be showing us a grid pixel approximation representation of each of our Environmental model's permitted position areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![environmental edit mode full comp 3d view](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![environmental edit mode full comp 3d view](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Materials 3D preview, except here we are actually positioning our environment category models.
 
 ---
