@@ -52,7 +52,7 @@ All our next buttons are disabled until the user has made at least 1 biome: <br/
 However once we do have at least one biome, these buttons are available to clicked. Lets go over each of these buttons.
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button.jpg?raw=true) <br/>
-![active state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button-active.jpg?raw=true) <br/>
+![active state](https://github.com/drolsen/terralux/blob/main/screenshots/World-Settings-Button-Active.jpg?raw=true) <br/>
 - World Settings = Its disabled until user has at least 1 biome created / selected. Once available and clicked, a grouping of global properties shows up in our properties window (always the top) and button remains in a clicked state. Click it again and global properties grouping goes away in properties window.
 
 ![default state](https://github.com/drolsen/terralux/blob/main/screenshots/Biome-Edit-Button.jpg?raw=true) <br/>
