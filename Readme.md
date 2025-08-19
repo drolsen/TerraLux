@@ -361,7 +361,7 @@ Ok lets move into each edit modes unique usage of 2D and 3D views.
 ---
 
 ## Material Edit Mode
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view shows uses our defined colors we set in the header of each material properties card (firsts screenshot) as an approximation representation of our applied material locations (second screenshot). In our example here, we defined our grass material to be a layer of 0, so its applied first and over the entire terrain, and we gave it a preview color of red. Next we set a brick material to apply, give it a layer number, applied some filtering to it across slopes or curves and set its preview color to green. Lastly we applied cobble stone, set a layer number, applied some filtering to it and gave it a preview color of blue. The result in our 2D view here should be showing us a grid pixel approximation representation of each of our materials applicable areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
 ![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
@@ -385,7 +385,7 @@ Next up is Environmental Edit mode.
 ## Stamps Edit Mode
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Stamps-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Stamps-Edit-Mode-3D.jpg?raw=true) <br/>
 - 3D view mode will now include Biome edit mode shape, Material edit mode painting, Environment Models and now stamps. 
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
@@ -405,7 +405,7 @@ However the preview window now will have a new option which toggles off Environm
 ### Cave Edit Mode
 Stamps does not have a 2D edit mode, and if the user happens to be in 2D edit mode while switching to stamps, they will be put into 3D mode automatically.
 
-![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Cave-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![preview window sample dropdown](https://github.com/drolsen/terralux/blob/main/comps/Cave-Edit-Mode-3D.jpg?raw=true) <br/>
 - 3D view mode will now include Biome, Material, Environmental, Stamps now, but the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
 
 However the preview window now will have a new option which toggles off Environment models if artist wants to clear them while testing either of the three edit modes.
