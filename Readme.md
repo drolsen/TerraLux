@@ -381,7 +381,7 @@ Ok lets move into each edit modes unique usage of 2D and 3D views.
 - 2D view shows a black and white approximation representation of our Biome amplitude and frequency etc settings that is used to generate our terrain shape. This gives artist a quick unique view into how their terrain shape is changing over various Biome edit settings, without committing to a full terrain generate. (Second screenshot) 
 
 ![biome edit mode full comp 3d](https://github.com/drolsen/terralux/blob/main/comps/Biome-Edit-Mode-3D-preview.jpg?raw=true) <br/>
-- 3D view is a devoid of anything environmental models, no material work and is purely focused on showing off terrain's shape.. the bare shape. I recommend here in this edit mode we generate the terrain with a snow material and set its color to something like that of a mudbox red. The third and fourth screenshots show our Biome Edit Mode in full. Next is Material Edit mode.
+- 3D view is a devoid of anything environmental models, no material work and is purely focused on showing off terrain's shape.. the bare shape. I recommend here in this edit mode we generate the terrain with a snow material and set its color to something like that of a mudbox red. The third and fourth screenshots show our Biome Edit Mode in full.
 
 ---
 
@@ -389,7 +389,7 @@ Ok lets move into each edit modes unique usage of 2D and 3D views.
 ![material edit mode full comp 2d](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view shows uses our defined colors we set in the header of each material properties card (firsts screenshot) as an approximation representation of our applied material locations (second screenshot). In our example here, we defined our grass material to be a layer of 0, so its applied first and over the entire terrain, and we gave it a preview color of red. Next we set a brick material to apply, give it a layer number, applied some filtering to it across slopes or curves and set its preview color to green. Lastly we applied cobble stone, set a layer number, applied some filtering to it and gave it a preview color of blue. The result in our 2D view here should be showing us a grid pixel approximation representation of each of our materials applicable areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![material edit mode full comp 3d](https://github.com/drolsen/terralux/blob/main/comps/Materials-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![material edit mode full comp 3d](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Biome 3D preview, except here we are actually applying our materials now.
 
 In conjunction, these two views give the artist a way to quick observe where their materials are being painted in 2D mode, then can jump into 3D mode and observe them.
@@ -402,7 +402,7 @@ Next up is Environmental Edit mode.
 ![environmental edit mode full comp 2d view](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-2D.jpg?raw=true) <br/>
 - 2D view uses our defined colors we set in the header of each groups properties card  as an approximation representation of our applied model's locations (second screenshot). In our example here, we defined our trees category and gave it a preview color of red. Same is true for our Cliff and Rocks categories set with preview colors of green and blue (respectively). The result in our 2D view here should be showing us a grid pixel approximation representation of each of our Environmental model's permitted position areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![environmental edit mode full comp 3d view](https://github.com/drolsen/terralux/blob/main/screenshots/Environmental-Edit-Mode-3D-preview.jpg?raw=true) <br/>
+![environmental edit mode full comp 3d view](https://github.com/drolsen/terralux/blob/main/comps/Environmental-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Materials 3D preview, except here we are actually positioning our environment category models.
 
 ---
@@ -446,12 +446,9 @@ Important part to know right now is that we indeed what to have a persistent ses
 # Plugin Iconography
 We have a lot of icons to this plugin, and all of them can be found in our icons folder. Each should be named according to the section they live in (Main Toolbar, Properties window, Preview window) and given a name that describes their feature.
 
-Perfect — that’s exactly what I needed.
-Here’s how I’d update your **Readme.md verbatim-style**, so those questions won’t come up again when anyone (including future-you 😏) reads it.
-
 ---
 
-# Clarifications
+# Common Clarifications Points
 
 1. **Scope of Settings**
 
@@ -532,10 +529,6 @@ Here’s how I’d update your **Readme.md verbatim-style**, so those questions 
 20. **UI Design Rules**
 
     > *The plugin UI follows the design comps: inline `label:value` fields, studio-native dropdowns (with hover/open/close states), and ObjectValue selectors for project assets. There are no sliders, custom dropdown widgets, or tooltips beyond what is shown in the comps.*
-
-🔥 Nice — crystal clear.
-Here’s how you’d “Readme-proof” those answers so nobody (including me 😅) ever asks them again:
-
 
 21. **JSON Storage Location**
 
