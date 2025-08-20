@@ -389,7 +389,7 @@ Ok lets move into each edit modes unique usage of 2D and 3D views.
 ![material edit mode full comp 2d](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-2D-preview.jpg?raw=true) <br/>
 - 2D view shows uses our defined colors we set in the header of each material properties card (firsts screenshot) as an approximation representation of our applied material locations (second screenshot). In our example here, we defined our grass material to be a layer of 0, so its applied first and over the entire terrain, and we gave it a preview color of red. Next we set a brick material to apply, give it a layer number, applied some filtering to it across slopes or curves and set its preview color to green. Lastly we applied cobble stone, set a layer number, applied some filtering to it and gave it a preview color of blue. The result in our 2D view here should be showing us a grid pixel approximation representation of each of our materials applicable areas (similar to a splat map, but not by any means.. rgb was just used for demo sakes).
 
-![material edit mode full comp 3d](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-2D-preview.jpg?raw=true) <br/>
+![material edit mode full comp 3d](https://github.com/drolsen/terralux/blob/main/comps/Material-Edit-Mode-3D-preview.jpg?raw=true) <br/>
 - 3D view is a just like our Biome 3D preview, except here we are actually applying our materials now.
 
 In conjunction, these two views give the artist a way to quick observe where their materials are being painted in 2D mode, then can jump into 3D mode and observe them.
