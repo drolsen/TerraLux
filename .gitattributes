@@ -1,0 +1,2 @@
+*.rbxmx filter=lfs diff=lfs merge=lfs -text
+*.lua filter=lfs diff=lfs merge=lfs -text
